@@ -1,0 +1,29 @@
+
+<div class="container">
+<table class="table table-bordered">
+	<thead>
+		<th>deptId</th>
+		<th>deptName</th>
+		<th>deptManager</th>
+		<th>empId</th>
+		<th>empDesig</th>
+		<th>loc</th>
+		<th>Action</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of deprt">
+		<td>{{item.deptId}}</td>
+		<td>{{item.deptName}}</td>
+		<td>{{item.deptManager}}</td>
+		<td>{{item.empId}}</td>
+		<td>{{item.empDesig}}</td>
+		<td>{{item.loc}}</td>
+		<!-- <td><button class="btn btn-success" (click)="deleteDepart(item)">delete</button></td> -->
+			<td><button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </button></td>
+	</tr>
+	</tbody>
+</table>
+</div>
+ 

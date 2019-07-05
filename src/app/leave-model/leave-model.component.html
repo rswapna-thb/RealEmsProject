@@ -1,0 +1,85 @@
+<div class="row">
+        <div class="col-sm-3">
+                <div class="sidenav">
+                    <a href="#about">Leave Management</a>
+                    <a href="#services">Employee Management</a>
+                    <a href="#clients">User Management</a>
+                    <a href="#contact">Allowance Management</a>
+                </div>
+            </div> 
+
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <select class="form-control" >
+                        <option>{{leaveType}} Report of employee</option>
+                    </select>
+                </div>
+                <div ng-if="show">
+                    <table class="table table-bordered" [hidden]="hiddenTable">
+                            <thead>
+                              <tr>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Total Leave Days</th>
+                                <th>Friday/Saturday</th>
+                                <th>Public Holiday</th>
+                                <th>Total Leave</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let leave of leavModel">
+                                <td>{{leave.startDay</td>
+                                <td>{{leave.endDay}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>/td>
+                              </tr>
+                            </tbody>
+                                <tfoot>
+                                    <tr>
+                                      <td colspan="4"></td>
+                                      <td>Total Leaves</td>
+                                      <td></td>
+                                    </tr>
+                                </tfoot>
+                            
+                        </table>
+                </div>
+                    <div class="col-8 grid-margin strech-card">
+                        <div class="card">
+                            <div class="card-body">
+                                    <div>
+                                        <label><h4>Create Leave Request</h4></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Select Leave Type</label>
+                                        <select class="form-control" default="select" [(ngModel)]="leavModel.leaveType" name="leaveType">
+                                            <option disabled>Select</option>
+                                            <option>leave-type1</option>
+                                            <option>leave-type2</option>
+                                            <option>leave-type3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Select Start Date</label>
+                                        <input type="date" class="form-control" [(ngModel)]="leavModel.startDay" name="startDay">
+                                    </div>   
+                                    <div class="form-group">
+                                        <label>Select End Date</label>
+                                        <input type="date" class="form-control" [(ngModel)]="leavModel.endDay" name="endDay">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Reason</label>
+                                        <textarea rows="2" class="form-control" [(ngModel)]="leavModel.reason" name="reason"></textarea> 
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-success" (click)="leaveInsert()||toggle()">Create</button>&nbsp;&nbsp;
+                                        <button class="btn btn-success">Cancel</button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+

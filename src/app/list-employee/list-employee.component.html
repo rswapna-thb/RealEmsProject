@@ -1,0 +1,60 @@
+
+<div class="container">
+<table class="table table-borderless">
+	<thead>
+		<tr>
+			<th>FirstName</th>
+			<th>LastName</th>
+			<th>mail</th>
+			<th>Gender</th>
+			<th>Status</th>
+			<th>DOB</th>
+			<th>tenYear</th>
+			<th>tenPercent</th>
+			<th>twelveYear</th>
+			<th>twelvePercent</th>
+			<th>beYear</th>
+			<th>bePercent</th>
+			<th>parAddress</th>
+			<th>preAddress</th>
+			<th>city</th>
+			<th>mNumber</th>
+			<th>fatherName</th>
+			<th>pan</th>
+			<th>adhaar</th>
+			<th>passport</th>
+			<th>password</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let emp of employee">
+			<td>{{emp.firstName}}</td>
+			<td>{{emp.lastName}}</td>
+			<td>{{emp.email}}</td>
+			<td>{{emp.gender}}</td>
+			<td>{{emp.status}}</td>
+			<td>{{emp.dob}}</td>
+			<td>{{emp.tenYear}}</td>
+			<td>{{emp.tenPercent}}</td>
+			<td>{{emp.twelveYear}}</td>
+			<td>{{emp.twelvePercent}}</td>
+			<td>{{emp.beYear}}</td>
+			<td>{{emp.bePercent}}</td>
+			<td>{{emp.parAddress}}</td>
+			<td>{{emp.preAddress}}</td>
+			<td>{{emp.city}}</td>
+			<td>{{emp.mNumber}}</td>
+			<td>{{emp.fatherName}}</td>
+			<td>{{emp.pan}}</td>
+			<td>{{emp.adhaar}}</td>
+			<td>{{emp.passport}}</td>
+			<td>{{emp.crtPassword}}</td>
+			<!--><td><i class="fas fa-user-edit"></i></td>-->
+			<td><button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </button></td>
+		</tr>
+	</tbody>
+</table>
+</div>
